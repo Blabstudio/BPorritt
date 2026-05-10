@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BPI &ndash; AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+:root { --navy-dark: #111f35; --sky: #dce8f5; --white: #ffffff; --muted: #8daabf; --rule: #c5d6e8; --accent: #4a80c4; }
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--navy-dark);
+  color: var(--white);
+  min-height: 100vh;
+  display: -webkit-box; display: -ms-flexbox; display: flex;
+  -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  display: -webkit-box; display: -ms-flexbox; display: flex;
+  -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;
+  -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+  padding: 1.6rem 3.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--white); text-decoration: none;
+}
+.nav-right { display: -webkit-box; display: -ms-flexbox; display: flex; gap: 0.75rem; }
+.nav-btn {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 400; color: rgba(255,255,255,0.75); text-decoration: none;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(255,255,255,0.25); border-radius: 2px;
+  -webkit-transition: all 0.2s; transition: all 0.2s;
+}
+.nav-btn.active, .nav-btn:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
+.container {
+  -webkit-box-flex: 1; -ms-flex: 1; flex: 1;
+  display: -webkit-box; display: -ms-flexbox; display: flex;
+  -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;
+  -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+  -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+  text-align: center; padding: 4rem 2rem;
+}
+.eyebrow {
+  font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--sky); margin-bottom: 1.5rem;
+  -webkit-animation: fadeUp 0.7s ease both; animation: fadeUp 0.7s ease both;
+}
+.headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5.5rem; font-weight: 300; line-height: 1.05;
+  margin-bottom: 1.5rem;
+  -webkit-animation: fadeUp 0.7s 0.1s ease both; animation: fadeUp 0.7s 0.1s ease both;
+}
+.headline em { font-style: italic; color: var(--sky); }
+.divider {
+  width: 40px; height: 1px; background: rgba(255,255,255,0.2);
+  margin: 0 auto 1.5rem;
+  -webkit-animation: fadeUp 0.7s 0.2s ease both; animation: fadeUp 0.7s 0.2s ease both;
+}
+.subline {
+  font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2.5rem;
+  -webkit-animation: fadeUp 0.7s 0.25s ease both; animation: fadeUp 0.7s 0.25s ease both;
+}
+.back-link {
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); text-decoration: none;
+  -webkit-transition: color 0.2s; transition: color 0.2s;
+  -webkit-animation: fadeUp 0.7s 0.3s ease both; animation: fadeUp 0.7s 0.3s ease both;
+}
+.back-link::before { content: '\2190'; margin-right: 0.5rem; }
+.back-link:hover { color: var(--white); }
+footer {
+  padding: 1.4rem 3.5rem;
+  display: -webkit-box; display: -ms-flexbox; display: flex;
+  -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;
+  -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.3); letter-spacing: 0.04em; }
+.footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.2); letter-spacing: 0.05em; }
+@-webkit-keyframes fadeUp {
+  from { opacity: 0; -webkit-transform: translateY(24px); transform: translateY(24px); }
+  to   { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .headline { font-size: 3.5rem; }
+  footer { padding: 1.2rem 1.5rem; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">BPI Public Strategy</a>
+  <div class="nav-right">
+    <a class="nav-btn active" href="bpi-ai.html">BPI &ndash; AI</a>
+    <a class="nav-btn" href="index.html#about">About</a>
+  </div>
+</nav>
+<div class="container">
+  <p class="eyebrow">BPI &ndash; AI</p>
+  <h1 class="headline">Coming <em>Summer</em> 2026</h1>
+  <div class="divider"></div>
+  <p class="subline">For Clients Only</p>
+  <a class="back-link" href="index.html">Back to BPI Public Strategy</a>
+</div>
+<footer>
+  <div class="footer-logo">BPI Public Strategy</div>
+  <div class="footer-copy">&copy; 2026 BPI Public Strategy. All rights reserved.</div>
+</footer>
+</body>
+</html>
